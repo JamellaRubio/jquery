@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> 
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <style>
+      #draggable, #draggable2, #draggable3 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery UI Autocomplete - Accordion </h1>
+
+        <div class="row">
+          <div class="col-1">
+            <h3>Widget</h3>
+                <ul><a href="../index.html">Accordion</a></ul>
+                <ul><a href="/Pages/AutoComplete.html">Autocomplete</a></ul>
+                <ul><a href="/Pages/button.html">Button</a></ul>
+                <ul><a href="/Pages/checkbox.html">Checkbox</a></ul>
+                <ul><a href="/Pages/controlgroup.html">Controlgroup</a></ul>
+                <ul><a href="/Pages/datepicker.html">Datepicker</a></ul>
+                <ul><a href="/Pages/dialog.html">Dialog</a></ul>
+                <ul><a href="/Pages/menu.html">Menu</a></ul>
+                <ul><a href="/Pages/progressbar.html">Progressbar</a></ul>
+                <ul><a href="/Pages/selectmenu.html">Selectmenu</a></ul>
+                <ul><a href="/Pages/slider.html">Slider</a></ul>
+                <ul><a href="/Pages/spinner.html">Spinner</a></ul>
+                <ul><a href="/Pages/tabs.html">Tabs</a></ul>
+                <ul><a href="/Pages/tooltip.html">Tooltip</a></ul>
+        </div>
+    
+<div id="draggable" class="ui-widget-content">
+  <img src="../images/image1.jpg" alt="" width="100px" height="100px">
+</div>
+ 
+<div id="draggable2" class="ui-widget-content">
+  <img src="../images/image2.jpg" alt="" width="100px" height="100px" >
+</div>
+ 
+<div id="draggable3" class="ui-widget-content">
+ <img src="../images/image3.jpg" alt="" width="100px" height="100px">
+</div>
+ 
+     
+        </div>
+    </div>  
+    
+    <footer>
+        <p>College of Information and Computing Sciences &copy; 2022</p>  
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#draggable" ).draggable({ cursor: "move", cursorAt: { top: 56, left: 56 } });
+        $( "#draggable2" ).draggable({ cursor: "crosshair", cursorAt: { top: -5, left: -5 } });
+        $( "#draggable3" ).draggable({ cursorAt: { bottom: 0 } });
+      } );
+      </script>
+</body>
+</html>

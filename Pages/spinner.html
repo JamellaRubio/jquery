@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> 
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+<style>  
+    body {
+        font-family: "Century Gothic", sans-serif;
+        color: #e0f7fa;
+        background-color: #141414;
+    }
+
+    .container {
+        display: flex;
+        padding: 20px;
+    }
+
+    .col-1, .col-2 {
+        padding: 20px;
+    }
+
+    .col-1 {
+        width: 30%;
+    }
+
+    .col-2 {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+
+    h1 {
+        color: #67c8eb;
+        margin-bottom: 10px;
+    }
+
+    .styled-form {
+        color: #e0f7fa;
+        font-family: "Century Gothic", sans-serif;
+        padding: 20px;
+        background: linear-gradient(145deg, #0e2f44, #1a4e63);
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .styled-form label {
+        color: #67c8eb;
+        font-size: 1.1em;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .styled-form input#spinner {
+        background-color: #154c61;
+        color: #67c8eb;
+        border: 2px solid #5ab3d9;
+        border-radius: 8px;
+        padding: 8px 12px;
+        width: 100%;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .styled-form input#spinner:focus {
+        border-color: #67c8eb;
+        box-shadow: 0 0 10px rgba(103, 200, 235, 0.5);
+        outline: none;
+    }
+
+    .styled-form button {
+        background: linear-gradient(145deg, #327a8c, #5ab3d9);
+        color: #e0f7fa;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 15px;
+        margin: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .styled-form button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .styled-form button:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #e0f7fa;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="col-1">
+        <h3>Widget</h3>
+        <ul><a href="../index.html">Accordion</a></ul>
+        <ul><a href="/Pages/AutoComplete.html">Autocomplete</a></ul>
+        <ul><a href="/Pages/button.html">Button</a></ul>
+        <ul><a href="/Pages/checkbox.html">Checkbox</a></ul>
+        <ul><a href="/Pages/controlgroup.html">Controlgroup</a></ul>
+        <ul><a href="/Pages/datepicker.html">Datepicker</a></ul>
+        <ul><a href="/Pages/dialog.html">Dialog</a></ul>
+        <ul><a href="/Pages/menu.html">Menu</a></ul>
+        <ul><a href="/Pages/progressbar.html">Progressbar</a></ul>
+        <ul><a href="/Pages/selectmenu.html">Selectmenu</a></ul>
+        <ul><a href="/Pages/slider.html">Slider</a></ul>
+        <ul><a href="/Pages/spinner.html">Spinner</a></ul>
+        <ul><a href="/Pages/tabs.html">Tabs</a></ul>
+        <ul><a href="/Pages/tooltip.html">Tooltip</a></ul>
+    </div>
+    <div class="col-2">
+        <h1>jQuery - Spinner</h1>
+        <div class="styled-form">
+            <p>
+                <label for="spinner">Select a value:</label>
+                <input id="spinner" name="value">
+            </p>
+            <p>
+                <button id="disable">Toggle disable/enable</button>
+                <button id="destroy">Toggle widget</button>
+            </p>
+            <p>
+                <button id="getvalue">Get value</button>
+                <button id="setvalue">Set value to 5</button>
+            </p>
+        </div>
+    </div>
+  </div>  
+    
+    <footer>
+        <p>College of Information and Computing Sciences &copy; 2022</p>  
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          var spinner = $( "#spinner" ).spinner();
+       
+          $( "#disable" ).on( "click", function() {
+            if ( spinner.spinner( "option", "disabled" ) ) {
+              spinner.spinner( "enable" );
+            } else {
+              spinner.spinner( "disable" );
+            }
+          });
+          $( "#destroy" ).on( "click", function() {
+            if ( spinner.spinner( "instance" ) ) {
+              spinner.spinner( "destroy" );
+            } else {
+              spinner.spinner();
+            }
+          });
+          $( "#getvalue" ).on( "click", function() {
+            alert( spinner.spinner( "value" ) );
+          });
+          $( "#setvalue" ).on( "click", function() {
+            spinner.spinner( "value", 5 );
+          });
+       
+          $( "button" ).button();
+        });
+    </script>
+</body>
+</html>

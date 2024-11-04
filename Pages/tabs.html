@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> 
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <style>
+        .container {
+            display: flex;
+            padding: 20px;
+
+        }
+
+        .col-1 {
+            width: 300px;
+            padding-right: 50px;
+        }
+
+        .col-2 {
+            width: calc(100% - 220px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .tabs {
+            width: 100%;
+            max-width: 500px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="col-1">
+        <h3>Widget</h3>
+        <ul><a href="../index.html">Accordion</a></ul>
+        <ul><a href="/Pages/AutoComplete.html">Autocomplete</a></ul>
+        <ul><a href="/Pages/button.html">Button</a></ul>
+        <ul><a href="/Pages/checkbox.html">Checkbox</a></ul>
+        <ul><a href="/Pages/controlgroup.html">Controlgroup</a></ul>
+        <ul><a href="/Pages/datepicker.html">Datepicker</a></ul>
+        <ul><a href="/Pages/dialog.html">Dialog</a></ul>
+        <ul><a href="/Pages/menu.html">Menu</a></ul>
+        <ul><a href="/Pages/progressbar.html">Progressbar</a></ul>
+        <ul><a href="/Pages/selectmenu.html">Selectmenu</a></ul>
+        <ul><a href="/Pages/slider.html">Slider</a></ul>
+        <ul><a href="/Pages/spinner.html">Spinner</a></ul>
+        <ul><a href="/Pages/tabs.html">Tabs</a></ul>
+        <ul><a href="/Pages/tooltip.html">Tooltip</a></ul>
+    </div>
+    
+    <div class="col-2">
+        <h1>jQuery - Tabs</h1>
+        <div class="tabs">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                    <li><a href="#tabs-2">Proin dolor</a></li>
+                    <li><a href="#tabs-3">Aenean lacinia</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</p>
+                </div>
+                <div id="tabs-2">
+                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis.</p>
+                </div>
+                <div id="tabs-3">
+                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <footer>
+      <p>College of Information and Computing Sciences &copy; 2022</p>  
+  </footer>
+
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script>
+      $( function() {
+          $( "#tabs" ).tabs();
+      });
+  </script>
+</body>
+</html>

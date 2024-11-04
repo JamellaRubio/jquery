@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> 
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+    fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    .overflow {
+      height: 200px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+ 
+    $( "#salutation" ).selectmenu();
+  } );
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>JQuery- Select Menu  </h1>
+    <div class="row">
+        <div class="col-1">
+          <h3>Widget</h3>
+              <ul><a href="../index.html">Accordion</a></ul>
+              <ul><a href="/Pages/AutoComplete.html">Autocomplete</a></ul>
+              <ul><a href="/Pages/button.html">Button</a></ul>
+              <ul><a href="/Pages/checkbox.html">Checkbox</a></ul>
+              <ul><a href="/Pages/controlgroup.html">Controlgroup</a></ul>
+              <ul><a href="/Pages/datepicker.html">Datepicker</a></ul>
+              <ul><a href="/Pages/dialog.html">Dialog</a></ul>
+              <ul><a href="/Pages/menu.html">Menu</a></ul>
+              <ul><a href="/Pages/progressbar.html">Progressbar</a></ul>
+              <ul><a href="/Pages/selectmenu.html">Selectmenu</a></ul>
+              <ul><a href="/Pages/slider.html">Slider</a></ul>
+              <ul><a href="/Pages/spinner.html">Spinner</a></ul>
+              <ul><a href="/Pages/tabs.html">Tabs</a></ul>
+              <ul><a href="/Pages/tooltip.html">Tooltip</a></ul>
+      </div>
+      <div class="demo">
+ 
+        <form action="#">
+         
+          <fieldset>
+            <label for="speed">Select a speed</label>
+            <select name="speed" id="speed">
+              <option>Slower</option>
+              <option>Slow</option>
+              <option selected="selected">Medium</option>
+              <option>Fast</option>
+              <option>Faster</option>
+            </select>
+         
+            <label for="files">Select a file</label>
+            <select name="files" id="files">
+              <optgroup label="Scripts">
+                <option value="jquery">jQuery.js</option>
+                <option value="jqueryui">ui.jQuery.js</option>
+              </optgroup>
+              <optgroup label="Other files">
+                <option value="somefile">Some unknown file</option>
+                <option value="someotherfile">Some other file with a very long option text</option>
+              </optgroup>
+            </select>
+         
+            <label for="number">Select a number</label>
+            <select name="number" id="number">
+              <option>1</option>
+              <option selected="selected">2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+            </select>
+         
+            <label for="salutation">Select a title</label>
+            <select name="salutation" id="salutation">
+              <option disabled="" selected="">Please pick one</option>
+              <option>Mr.</option>
+              <option>Mrs.</option>
+              <option>Dr.</option>
+              <option>Prof.</option>
+              <option>Other</option>
+            </select>
+          </fieldset>
+         
+        </form>
+         
+        </div>
+         
+    
+    <footer>
+        <p>College of Information and Computing Sciences &copy; 2022</p>  
+    </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+</body>
+</html>
