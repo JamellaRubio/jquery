@@ -12,28 +12,36 @@
     body {
         font-family: "Century Gothic", sans-serif;
         color: #e0f7fa;
-        background-color: #141414;
+        background-color: #1a4e63;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #1a4e63;
+        padding: 20px;
+        text-align: center;
+        color: #e0f7fa;
     }
 
     .container {
         display: flex;
-        padding: 20px;
-    }
 
-    .col-1, .col-2 {
-        padding: 20px;
     }
 
     .col-1 {
-        width: 30%;
+        width: 300px;
+        height: 800px;
+        padding: 20px;
+        background-color: #0e2f44;
+        overflow-y: auto;
     }
 
     .col-2 {
-        width: 70%;
+        flex: 1;
+        height: 800px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 0;
+        padding: 20px;
     }
 
     h1 {
@@ -48,7 +56,8 @@
         background: linear-gradient(145deg, #0e2f44, #1a4e63);
         border-radius: 15px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        width: 100%;
+        width: 600px;
+        height: 300px;
         margin-top: 20px;
     }
 
@@ -106,10 +115,29 @@
         margin-top: 20px;
         color: #e0f7fa;
     }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul a {
+        color: #67c8eb;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+    }
+
+    ul a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
 <body>
-  <div class="container">
+<header>
+    <h1>JQuery - Spinner</h1>
+</header>
+<div class="container">
     <div class="col-1">
         <h3>Widget</h3>
         <ul><a href="../index.html">Accordion</a></ul>
@@ -128,7 +156,6 @@
         <ul><a href="/Pages/tooltip.html">Tooltip</a></ul>
     </div>
     <div class="col-2">
-        <h1>jQuery - Spinner</h1>
         <div class="styled-form">
             <p>
                 <label for="spinner">Select a value:</label>
@@ -144,41 +171,41 @@
             </p>
         </div>
     </div>
-  </div>  
-    
-    <footer>
-        <p>College of Information and Computing Sciences &copy; 2022</p>  
-    </footer>
+</div>  
 
-    <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script>
-        $( function() {
-          var spinner = $( "#spinner" ).spinner();
-       
-          $( "#disable" ).on( "click", function() {
-            if ( spinner.spinner( "option", "disabled" ) ) {
-              spinner.spinner( "enable" );
-            } else {
-              spinner.spinner( "disable" );
-            }
-          });
-          $( "#destroy" ).on( "click", function() {
-            if ( spinner.spinner( "instance" ) ) {
-              spinner.spinner( "destroy" );
-            } else {
-              spinner.spinner();
-            }
-          });
-          $( "#getvalue" ).on( "click", function() {
-            alert( spinner.spinner( "value" ) );
-          });
-          $( "#setvalue" ).on( "click", function() {
-            spinner.spinner( "value", 5 );
-          });
-       
-          $( "button" ).button();
-        });
-    </script>
+<footer>
+    <p>College of Information and Computing Sciences &copy; 2022</p>  
+</footer>
+
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script>
+    $(function() {
+      var spinner = $("#spinner").spinner();
+   
+      $("#disable").on("click", function() {
+        if (spinner.spinner("option", "disabled")) {
+          spinner.spinner("enable");
+        } else {
+          spinner.spinner("disable");
+        }
+      });
+      $("#destroy").on("click", function() {
+        if (spinner.spinner("instance")) {
+          spinner.spinner("destroy");
+        } else {
+          spinner.spinner();
+        }
+      });
+      $("#getvalue").on("click", function() {
+        alert(spinner.spinner("value"));
+      });
+      $("#setvalue").on("click", function() {
+        spinner.spinner("value", 5);
+      });
+   
+      $("button").button();
+    });
+</script>
 </body>
 </html>
